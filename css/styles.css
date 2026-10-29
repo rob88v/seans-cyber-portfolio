@@ -494,37 +494,39 @@ li { margin-bottom: var(--space-2); }
 /* ============================================================
    10. TIMELINE (EXPERIENCE)
    ============================================================ */
-/* Fix double bullet markers in experience timeline */
+
+/* Reset BOTH the outer <ol> and inner <ul> */
+.timeline,
 .timeline ul {
   list-style: none;
   padding-left: 0;
   margin-left: 0;
 }
 
+/* Inner bullet items (the job responsibility bullets) */
 .timeline ul li {
   list-style: none;
   position: relative;
   padding-left: 1.25rem;
+  margin-bottom: var(--space-2);
+  font-size: var(--fs-sm);
 }
 
-/* Custom teal bullet marker */
+/* Custom teal bullet marker — ONLY on inner <ul> items */
 .timeline ul li::before {
   content: "•";
   position: absolute;
   left: 0;
-  color: #4fd1c5; /* match your teal accent color */
+  color: #4fd1c5;
   font-size: 1.1rem;
   line-height: 1.4;
 }
+
 .timeline .meta {
   color: var(--text-muted);
   font-size: var(--fs-sm);
   margin-bottom: var(--space-3);
 }
-.timeline ul { margin: 0; }
-.timeline li li { margin-bottom: var(--space-2); font-size: var(--fs-sm); }
-
-
 /* ============================================================
    11. CERTIFICATIONS GRID
    ============================================================ */
