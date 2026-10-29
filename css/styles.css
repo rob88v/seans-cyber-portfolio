@@ -494,33 +494,27 @@ li { margin-bottom: var(--space-2); }
 /* ============================================================
    10. TIMELINE (EXPERIENCE)
    ============================================================ */
-.timeline {
+/* Fix double bullet markers in experience timeline */
+.timeline ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  border-left: 2px solid var(--border);
-  padding-left: var(--space-5);
+  padding-left: 0;
+  margin-left: 0;
 }
-.timeline li {
+
+.timeline ul li {
+  list-style: none;
   position: relative;
-  margin-bottom: var(--space-6);
-  padding-left: var(--space-3);
+  padding-left: 1.25rem;
 }
-.timeline li::before {
-  content: "";
+
+/* Custom teal bullet marker */
+.timeline ul li::before {
+  content: "•";
   position: absolute;
-  left: calc(-1 * var(--space-5) - 7px);
-  top: 8px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--accent);
-  border: 2px solid var(--bg-alt);
-}
-.timeline h3 {
-  margin: 0 0 var(--space-1);
-  font-size: var(--fs-lg);
+  left: 0;
+  color: #4fd1c5; /* match your teal accent color */
+  font-size: 1.1rem;
+  line-height: 1.4;
 }
 .timeline .meta {
   color: var(--text-muted);
